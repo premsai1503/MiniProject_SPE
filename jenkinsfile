@@ -49,7 +49,7 @@ pipeline {
                 sh 'docker rmi -f premsai1503/miniproj:latest'
             }
         }
-        stage('Clean Docker Images')
+        stage('Deploy docker image')
         {
             steps
             {

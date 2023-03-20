@@ -25,5 +25,13 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        stage("Building Docker Image")
+        {
+            steps
+            {
+                sh 'docker build -t premsai1503/miniproj:latest .'
+                sh 'docker push docker push premsai1503/miniproj:latest'
+            }
+        }
     }
 }

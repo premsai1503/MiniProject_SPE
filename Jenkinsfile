@@ -1,5 +1,4 @@
-pipeline
-{
+pipeline {
     // The “agent” section configures on which nodes the pipeline can be run.
     // Specifying “agent any” means that Jenkins will run the job on any of the
     // available nodes.
@@ -15,9 +14,8 @@ pipeline
                 // Get code from a GitHub repository
                 // Make sure to add your own git url and credentialsId
 				git url: 'https://github.com/premsai1503/MiniProject_SPE.git',
-				branch: 'main',
-                credentialsId: 'GitCredential'
-            }
+				branch: 'main'
+			}
         }
         stage('Maven Build')
         {

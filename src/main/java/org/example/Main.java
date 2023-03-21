@@ -1,15 +1,19 @@
 package org.example;
 
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public class Main
 {
-
+    //private static final Calculator.logger Calculator.logger = LogManager.getCalculator.logger(Calculator.class);
     public static void main(String[] args)
     {
         Calculator calc = new Calculator();
         Scanner sc = new Scanner(System.in);
-//    	logger.entry();
+
+    	Calculator.logger.entry();
         System.out.println("Calculator Opened");
         System.out.println("Select the required operation by entering the corresponding number");
         System.out.println("1. Square root function - √x");
@@ -28,7 +32,7 @@ public class Main
             if (Double.isNaN(ans))
             {
                 System.out.println("Invalid input, Please Try again");
-                //logger.error("Invalid input, Entered input is not of the expected type");
+                Calculator.logger.error("Invalid input, Entered input is not of the expected type");
 
                 return;
             }
@@ -44,7 +48,7 @@ public class Main
             if(Double.isNaN(ans))
             {
                 System.out.println("Invalid input, Please Try again");
-                //logger.error("Invalid input, Entered input is not of the expected type");
+                Calculator.logger.error("Invalid input, Entered input is not of the expected type");
 
                 return;
             }

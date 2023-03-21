@@ -1,12 +1,16 @@
 package org.example;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;  // Import the Scanner class
 import java.lang.Math;
 public class Calculator
 {
+    public static final Logger logger = LogManager.getLogger(Calculator.class);
     public double root(double n)
     {
-        //logger.info("[ROOT] - " + n);
+        logger.info("[ROOT] - " + n);
         if (n < 0)
         {
             return Double.NaN;
@@ -14,12 +18,12 @@ public class Calculator
 
         double ans;
         ans = Math.sqrt(n);
-        //logger.info("[RESULT - ROOT] - " + ans);
+        logger.info("[RESULT - ROOT] - " + ans);
         return ans;
     }
     public double factorial (int n)
     {
-        //logger.info("[FACTORIAL] - " + n);
+        logger.info("[FACTORIAL] - " + n);
         if(n<0)
         {
             return Double.NaN;
@@ -28,23 +32,23 @@ public class Calculator
         for(int i=1;i<n+1;i++) {
             ans*=i;
         }
-        //logger.info("[RESULT - FACTORIAL] - " + ans);
+        logger.info("[RESULT - FACTORIAL] - " + ans);
         return ans;
     }
     public double log(double n)
     {
-        //logger.info("[LOG] - " + n);
+        logger.info("[LOG] - " + n);
         double ans;
         ans = Math.log(n);
-        //logger.info("[RESULT - LOG] - " + ans);
+        logger.info("[RESULT - LOG] - " + ans);
         return ans;
     }
     public double power (double n1,double n2)
     {
-        //logger.info("[POW] - " + n1+"-"+n2);
+        logger.info("[POW] - " + n1+"-"+n2);
         double ans;
         ans = Math.pow(n1,n2);
-        //logger.info("[RESULT - POW] - " + ans);
+        logger.info("[RESULT - POW] - " + ans);
         return ans;
     }
 //    public static void main(String[] args)

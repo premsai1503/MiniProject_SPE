@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Main
 {
+    //thinnava ra
     //private static final Calculator.logger Calculator.logger = LogManager.getCalculator.logger(Calculator.class);
     public static void main(String[] args)
     {
